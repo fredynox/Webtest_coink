@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Poner un block para que luego pueda ser remplazado en las siguientes plantillas; lo mismo con el  block contenido-->
+        <title1>Usuarios Registrados </title1>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    </head>
+</style>
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="is-size-3"> Usuarios </h3>    
+            <body>
+                <table class="table">
+                    <!--thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>E-Mail</th>
+                        <th>Teléfono</th>
+                    </tr>
+                    </thead-->
+                    <tbody>
+                    {% if res %}
+                        {% for temp in res %}
+                        <tr>                        
+                            <td>{{temp }}</td>
+                            
+                        </tr>        
+                        {% endfor %}
+                    {% endif %}        
+                                
+                    </tbody>        
+                </table>
+                
+            </body>
+    </div>    
+</section>
